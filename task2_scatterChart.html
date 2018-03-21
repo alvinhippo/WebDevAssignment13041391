@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="task2_scatterChart.js"></script>
+        <link rel ="stylesheet" href="styles.css">
+        <title>NO2 level - Scatter Chart</title>
+    </head>
+    <body>
+    <center>
+        <div id="chart_div" style="width: 1200px; height: 500px;"></div>
+        <br><br>
+        <form>
+            Select a station:
+            <select id="stations" onchange="updateChart()">
+                <option value="brislington" selected="selected">3 Brislington</option>
+                <option value="fishponds">6 Fishponds</option>
+                <option value="parson_st">8 parson st</option>
+                <option value="rupert_st">9 rupert st</option>
+                <option value="wells_rd">10 wells road</option>
+                <option value="newfoundland_way">11 newfoundland way</option>
+            </select>
+            <br><br>
+            Select a specific year:
+            <select id ="year" onchange="updateChart()">
+                <option value="2014" selected="selected">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+            </select>
+            <br><br>
+            Select a specific hour:
+            <div id ="time"></div>
+        </form>
+    </center>
+</body>
+</html>
